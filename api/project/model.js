@@ -5,4 +5,8 @@ const getProjects = () => {
     return db("projects")
 }
 
-module.exports ={getProjects}
+const createProject = (project)=>{
+    return db("projects").insert(project)
+}
+
+module.exports ={getProjects, createProject}
