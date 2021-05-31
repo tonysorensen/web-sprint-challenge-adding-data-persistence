@@ -6,8 +6,7 @@ const Resources = require("./model")
 const router = express.Router();
 
 router.get("/resources", (req, res, next) => {
-  console.log('getResources', Resources.getResources);
-  Resources.find()
+  Resources.getResources()
     .then(resources => {
       res.status(200).json(resources);
     })

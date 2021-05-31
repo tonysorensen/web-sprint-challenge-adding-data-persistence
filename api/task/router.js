@@ -6,8 +6,7 @@ const Tasks = require("./model")
 const router = express.Router();
 
 router.get("/tasks", (req, res, next) => {
-  console.log('getTasks', Tasks.getTasks);
-  Tasks.find()
+  Tasks.getTasks()
     .then(tasks => {
       res.status(200).json(tasks);
     })

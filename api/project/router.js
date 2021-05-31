@@ -6,8 +6,7 @@ const Projects = require("./model")
 const router = express.Router();
 
 router.get("/projects", (req, res, next) => {
-  console.log('getProjects', Projects.getProjects);
-  Projects.find()
+  Projects.getProjects()
     .then(projects => {
       res.status(200).json(projects);
     })
